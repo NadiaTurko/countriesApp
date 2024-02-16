@@ -37,9 +37,9 @@ export default function CountryCard() {
       {country ? renderObjectList(country) : null}
       <Button
         variant="contained"
-        color="success"
         type="submit"
-        sx={useStyles.button}
+        color="success"
+        sx={useStyles.buttonForm}
         onClick={() => handleCountryDelete(country.name.official)}
       >
         Delete country

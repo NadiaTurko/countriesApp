@@ -6,10 +6,10 @@ import { NavLink } from "react-router-dom";
 export default function Navigation() {
   return (
     <List>
-      <ListItem style={useStyles.listItem} component={NavLink} to="/">
+      <ListItem sx={useStyles.listItem} component={NavLink} to="/">
         <ListItemText primary="Home" />
       </ListItem>
-      <ListItem style={useStyles.listItem} component={NavLink} to="/countries">
+      <ListItem sx={useStyles.listItem} component={NavLink} to="/countries">
         <ListItemText primary="Countries" />
       </ListItem>
     </List>

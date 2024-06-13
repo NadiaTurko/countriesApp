@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Countries App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web application to display data about countries.
 
-## Available Scripts
+### Demo
 
-In the project directory, you can run:
+Check out the live demo: [Countries App](https://nadiaturko.github.io/countriesApp/)
 
-### `npm start`
+### Tech Stack:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- React Router
+- Redux
+- react-redux
+- 🌟 redux-thunk
+- 🌟 redux-toolkit
+- 🌟 MUI
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Data Sources:
 
-### `npm test`
+- Data: [countries data](https://raw.githubusercontent.com/brightestsirius/React_23/master/final_project/src/store/data.js)
+- API: [Rest Countries](https://restcountries.com/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Pages/Routes
 
-### `npm run build`
+#### Home
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Home Component: Displays text, e.g., <h3>Home Component 🏡</h3>
+- Country Form Component: Form with two Select elements and a button:
+  - Select for choosing a capital (country.capitals[0])
+  - Select for choosing a translation language (country.translations)
+  - Button "Read more about {country}" to navigate to the country page with the selected language
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Countries
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Countries List Component: Displays a list of countries
+  - Country flag (country.flag)
+  - Country name (country.name.official), redirects to the country page when clicked
+  - "Delete" button to remove the country from the list and from store.countries
 
-### `npm run eject`
+#### Country
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Country Card Component: Displays data about a country
+  - Country name (country.name.official or country.translations[{translation}].official)
+  - List of all country properties
+  - "Delete" button to remove the country and redirect to the Countries page
+- Redirect Button Component: Button to redirect to a specified route, e.g., "Back to Countries"
